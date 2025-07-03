@@ -9,6 +9,8 @@ COPY . .
 # Cài pip và thư viện cần thiết
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
+#---------------#
+ENV DJANGO_SETTINGS_MODULE=MyProject.settings
 
 # Mở port 8000 cho WebSocket/API
 EXPOSE 8000
